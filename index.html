@@ -530,6 +530,44 @@
 
   .pub-doi a:hover { color: var(--amber); }
 
+  .doi-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    padding: 5px 12px;
+    border: 1px solid var(--amber-dim);
+    color: var(--amber);
+    text-decoration: none;
+    margin-top: 12px;
+    transition: all 0.2s;
+  }
+
+  .doi-badge:hover {
+    background: var(--amber);
+    color: var(--bg);
+    border-color: var(--amber);
+  }
+
+  .proj-github-link {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    color: var(--teal);
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid rgba(61,214,198,0.3);
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+
+  .proj-github-link:hover {
+    background: rgba(61,214,198,0.1);
+    border-color: var(--teal);
+  }
+
   /* ─── CERTS ─── */
   .cert-grid {
     display: grid;
@@ -746,7 +784,7 @@
     <div class="hero-title">Geospatial Researcher &amp; Urban Analyst</div>
 
     <p class="hero-bio">
-      M.Sc. candidate at BUET specialising in Disaster Risk Reduction. Research assistant at the Centre for Urban Studies, Dhaka — mapping cities, modelling risk, and translating spatial data into policy-relevant insights.
+      M.Sc. candidate at BUET specialising in Disaster Risk Reduction, and Research Assistant at the Centre for Urban Studies, Dhaka. My research sits at the intersection of geospatial science, urban informality, and environmental change. I use satellite remote sensing, GIS, and Python to study how cities grow, how land use shapes thermal environments, and how spatial fragmentation threatens sustainable development. My published work covers urban sprawl dynamics in Rangpur City Corporation using Landsat imagery, Shannon's Entropy, and Landscape Metrics, as well as socio-economic drivers of Urban Heat Island intensification on Saint Martin's Island. I build tools — from fire risk models for informal settlements to interactive spatial applications — that turn complex geodata into actionable insight.
     </p>
 
     <div class="hero-cta">
@@ -840,10 +878,15 @@
   </div>
 
   <div class="projects-grid">
-    <div class="proj-card reveal">
-      <div class="proj-icon">🔥</div>
+    <div class="proj-card reveal" style="cursor:pointer;" onclick="window.open('https://github.com/cupid-shell/Fire-Risk-Analysis-App','_blank')">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+        <div class="proj-icon">🔥</div>
+        <a href="https://github.com/cupid-shell/Fire-Risk-Analysis-App" target="_blank" class="proj-github-link" onclick="event.stopPropagation()">
+          ↗ View on GitHub
+        </a>
+      </div>
       <div class="proj-name">Fire Risk Analysis Web App</div>
-      <p class="proj-desc">End-to-end Python application analysing fire risk in urban informal settlements. Composite risk model based on building density and emergency vehicle access.</p>
+      <p class="proj-desc">End-to-end Python application analysing fire risk in urban informal settlements. Fetches OpenStreetMap data via OSMnx, engineers a composite risk model based on building density and emergency vehicle access, and serves results through an interactive Streamlit interface with multi-map visualisation.</p>
       <div class="proj-tags">
         <span class="tag">Python</span>
         <span class="tag">OSMnx</span>
@@ -855,23 +898,24 @@
     <div class="proj-card reveal">
       <div class="proj-icon">🏝️</div>
       <div class="proj-name">Saint Martin's Island — Environmental Analysis</div>
-      <p class="proj-desc">Field survey on land use/cover and socio-economic conditions. Produced LULC, NDVI, and Urban Heat Island maps assessing environmental status.</p>
+      <p class="proj-desc">Field survey of 225 households combined with Landsat-8 remote sensing (2018–2022). Produced NDVI, NDBI, LST and UHI maps revealing an 80% increase in built-up area and UHI intensification from 2.6°C to 3.8°C, linking tourism-driven land conversion to thermal degradation on Bangladesh's only coral island.</p>
       <div class="proj-tags">
         <span class="tag">Remote Sensing</span>
-        <span class="tag">LULC</span>
         <span class="tag">NDVI</span>
         <span class="tag">UHI</span>
+        <span class="tag">Landsat-8</span>
       </div>
     </div>
 
     <div class="proj-card reveal">
       <div class="proj-icon">🗺️</div>
-      <div class="proj-name">Urban Sprawl — Rangpur City</div>
-      <p class="proj-desc">B.Sc. dissertation exploring spatiotemporal patterns of urban sprawl in Rangpur City from 2003–2023 using advanced geospatial techniques.</p>
+      <div class="proj-name">Urban Sprawl — Rangpur City Corporation</div>
+      <p class="proj-desc">B.Sc. dissertation and published study tracking RpCC's urban expansion from 2.2 to 33.9 km² (2003–2023) using Landsat TM/OLI imagery. Applied Shannon's Entropy Model, Urban Expansion Intensity Index, and six Landscape Metrics (FRAGSTATS) to confirm medium-speed, dispersed sprawl threatening sustainable development.</p>
       <div class="proj-tags">
         <span class="tag">ArcGIS</span>
-        <span class="tag">Spatial Analysis</span>
-        <span class="tag">Geoj.12615</span>
+        <span class="tag">Shannon Entropy</span>
+        <span class="tag">Landscape Metrics</span>
+        <span class="tag">UEII</span>
       </div>
     </div>
 
@@ -901,7 +945,8 @@
     <div>
       <div class="pub-title">Urban sprawl in Rangpur City Corporation from 2003 to 2023: A spatiotemporal exploration using geospatial techniques</div>
       <div class="pub-journal">THE GEOGRAPHICAL JOURNAL — 2024</div>
-      <div class="pub-doi">Adhikari, A., Ghosh, B.K. &amp; Rahman, M.N. &nbsp;|&nbsp; <a href="https://doi.org/10.1111/geoj.12615" target="_blank">doi:10.1111/geoj.12615</a></div>
+      <div class="pub-doi">Adhikari, A., Ghosh, B.K. &amp; Rahman, M.N.</div>
+      <a class="doi-badge" href="https://doi.org/10.1111/geoj.12615" target="_blank">⬡ DOI: 10.1111/geoj.12615</a>
     </div>
   </div>
 
@@ -910,7 +955,8 @@
     <div>
       <div class="pub-title">The effects of socio-economic conditions and land use pattern on land surface temperature and urban heat island at Saint Martin's Island, Bangladesh</div>
       <div class="pub-journal">THEORETICAL AND APPLIED CLIMATOLOGY — 2025</div>
-      <div class="pub-doi">Rony, M.R.H., Jannat, F.A., Adhikari, A. et al. &nbsp;|&nbsp; <a href="https://doi.org/10.1007/s00704-025-05739-x" target="_blank">doi:10.1007/s00704-025-05739-x</a></div>
+      <div class="pub-doi">Rony, M.R.H., Jannat, F.A., Adhikari, A. et al.</div>
+      <a class="doi-badge" href="https://doi.org/10.1007/s00704-025-05739-x" target="_blank">⬡ DOI: 10.1007/s00704-025-05739-x</a>
     </div>
   </div>
 </section>
@@ -1062,13 +1108,6 @@
         <div class="contact-val">avishekadhikari99@gmail.com</div>
       </div>
     </a>
-    <a class="contact-item reveal" href="tel:+8801719247127">
-      <div class="contact-icon">☏</div>
-      <div>
-        <div class="contact-type">Phone</div>
-        <div class="contact-val">+880 1719-247127</div>
-      </div>
-    </a>
     <a class="contact-item reveal" href="https://linkedin.com/in/avishekadhikari" target="_blank">
       <div class="contact-icon">⬡</div>
       <div>
@@ -1099,13 +1138,17 @@
   });
 
   /* ─── REVEAL ON SCROLL ─── */
-  const revealEls = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+  function checkReveals() {
+    document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight + 100) {
+        el.classList.add('visible');
+      }
     });
-  }, { threshold: 0.12 });
-  revealEls.forEach(el => io.observe(el));
+  }
+  window.addEventListener('scroll', checkReveals);
+  window.addEventListener('load', checkReveals);
+  checkReveals();
 
   /* ─── ANIMATED CONTOUR LINES ─── */
   const canvas = document.getElementById('contour-canvas');
