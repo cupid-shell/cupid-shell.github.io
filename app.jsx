@@ -210,7 +210,7 @@ const Hero = ({ heroCopy, heroSub }) => {
             <div className="orbit o1" />
             <div className="orbit o2" />
             <div className="frame">
-              <img src="assets/avishek.jpg" alt="Avishek Adhikari" style={{ objectFit: "contain", borderStyle: "solid", borderWidth: "0px", borderRadius: "0px", padding: "0px", width: "35px", height: "4px" }} />
+              <img src="assets/avishek.jpg" alt="Avishek Adhikari" />
             </div>
             <div className="orbit-chip c1">
               <span className="chip-ico" style={{ background: 'var(--c-sky-bg)', color: 'var(--c-sky-fg)' }}><Icon.Satellite /></span>
@@ -257,22 +257,22 @@ const About = () =>
             are meant to put that evidence in planners' hands.
           </p>
         </div>
-        <div className="info-card teal" style={{ color: "rgb(220, 218, 218)" }}>
+        <div className="info-card teal">
           <div className="ico-box"><Icon.MapPin /></div>
           <h3>Policy-facing research</h3>
           <p>At the Centre for Urban Studies I co-write policy briefs on housing and informal settlements, and design the field surveys that back them — linking satellite evidence to the decisions planners actually make.</p>
         </div>
-        <div className="info-card peach" style={{ color: "rgb(222, 222, 222)" }}>
+        <div className="info-card peach">
           <div className="ico-box"><Icon.Satellite /></div>
           <h3>Remote sensing first</h3>
           <p>Four decades of Landsat, Sentinel-2 and MODIS stitched together in Google Earth Engine.</p>
         </div>
-        <div className="info-card butter" style={{ color: "rgb(220, 220, 220)" }}>
+        <div className="info-card butter">
           <div className="ico-box"><Icon.Globe /></div>
           <h3>Geography of risk</h3>
           <p>Fire in informal settlements, Urban Heat Islands on coral islands, flood exposure on deltas.</p>
         </div>
-        <div className="info-card sky" style={{ color: "rgb(217, 217, 217)" }}>
+        <div className="info-card sky">
           <div className="ico-box"><Icon.Shield /></div>
           <h3>Disaster risk reduction</h3>
           <p>Current M.Sc. at BUET focused on how cities can be read for hazard, vulnerability and resilience — from seismic risk to climate adaptation.</p>
