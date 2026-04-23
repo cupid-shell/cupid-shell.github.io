@@ -562,7 +562,7 @@ const Skills = () =>
               </div>
               <h4 className="skill-tile-title">{s.group}</h4>
               <p className="skill-tile-intro">{s.intro}</p>
-              <div className="skill-chips" style={{ gap: "66px", flexDirection: "row", textAlign: "left", justifyContent: "center", alignItems: "flex-start", height: "11.15px", width: "222.5px", padding: "2px 0px 0px", margin: "10px 0px 0px" }}>
+              <div className="skill-chips">
                 {s.items.map((it) => <span key={it} className="skill-chip">{it}</span>)}
               </div>
             </div>);
