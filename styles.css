@@ -809,6 +809,26 @@ section { padding-top: var(--pad-section); padding-bottom: var(--pad-section); p
   gap: 12px;
   flex-wrap: wrap;
 }
+.pub-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+.pub-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  padding: 6px 12px;
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--radius-full);
+  transition: background .15s, border-color .15s;
+}
+.pub-action:hover { background: var(--accent-container); border-color: var(--accent); }
 
 /* CONTACT */
 .contact {

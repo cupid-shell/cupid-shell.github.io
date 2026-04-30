@@ -632,7 +632,7 @@ const Writing = () =>
       <h2 className="section-title">Papers, preprints & <em>field notes</em>.</h2>
       <div className="writing-grid">
         {PUBLICATIONS.map((p, i) =>
-      <a key={i} className="pub-card" href={p.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <div key={i} className="pub-card">
             <div className="pub-cover" style={{ background: `var(--c-${p.cover}-bg)`, color: `var(--c-${p.cover}-fg)` }}>
               <svg viewBox="0 0 96 128" width="100%" height="100%">
                 <rect x="12" y="18" width="72" height="2" fill="currentColor" opacity=".6" />
@@ -647,9 +647,13 @@ const Writing = () =>
               <div className="pub-meta">
                 {p.meta.map((m, j) => <span key={j}>{m}</span>)}
               </div>
+              <div className="pub-actions">
+                <a className="pub-action" href={p.link} target="_blank" rel="noopener noreferrer"><Icon.Arrow /> Read paper</a>
+                {p.pdf && <a className="pub-action" href={p.pdf} target="_blank" rel="noopener noreferrer"><Icon.Download /> Download PDF</a>}
+              </div>
             </div>
-          </a>
-      )}
+          </div>
+        )}
       </div>
     </div>
   </section>;

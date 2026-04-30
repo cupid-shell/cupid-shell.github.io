@@ -53,6 +53,7 @@ const PUBLICATIONS = [
     title: 'Urban sprawl in Rangpur City Corporation from 2003 to 2023: a spatiotemporal exploration using geospatial techniques',
     meta: ['Adhikari, A., Ghosh, B.K. & Rahman, M.N.', 'Vol. 191, e12615', 'Wiley / RGS-IBG · Open access', 'Grew out of my B.Sc. dissertation at Begum Rokeya University.'],
     link: 'https://doi.org/10.1111/geoj.12615',
+    pdf: 'papers/adhikari-2024-urban-sprawl-rangpur.pdf',
     cover: 'sky',
   },
   {
@@ -60,6 +61,7 @@ const PUBLICATIONS = [
     title: 'The effects of socio-economic conditions and land use pattern on land surface temperature and Urban Heat Island at Saint Martin\'s Island in Bangladesh',
     meta: ['Rony, M.R.H., Jannat, F.A., Adhikari, A. et al.', 'Vol. 156, Article 541', 'Springer Nature'],
     link: 'https://doi.org/10.1007/s00704-025-05739-x',
+    pdf: 'papers/rony-2025-lst-uhi-saint-martins.pdf',
     cover: 'peach',
   },
 ];
