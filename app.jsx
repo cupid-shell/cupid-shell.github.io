@@ -10,7 +10,7 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "pattern": "dots",
   "heroCopy": "Maps that listen to cities.",
   "heroSub": "I'm Avishek Adhikari — an M.Sc. candidate at the Institute of Disaster Prevention and Urban Safety, BUET, and a Research Assistant at the Centre for Urban Studies, Dhaka. I build spatial models that predict how cities grow, heat up, and fragment — so planners can see the risk before it arrives.",
-  "theme": "light"
+  "theme": "dark"
 } /*EDITMODE-END*/;
 
 const ACCENTS = {
@@ -197,7 +197,7 @@ const Hero = ({ heroCopy, heroSub }) => {
               Available for research collaboration · Dhaka, BD
             </div>
             <h1 className="hero-title">{renderTitle()}</h1>
-            <p className="hero-sub" style={{ textAlign: "justify", fontSize: "18px" }}>
+            <p className="hero-sub">
               {renderHeroSub(heroSub)}
             </p>
             <div className="hero-ctas">
@@ -249,7 +249,7 @@ const About = () =>
       <h2 className="section-title">A planner turned <em>cartographer of change</em>.</h2>
       <div className="about-grid">
         <div className="about-card-big">
-          <p style={{ textAlign: "left", fontSize: "27px" }}>
+          <p>
             I work where satellite data, urban planning, and fieldwork collide. My research asks how
             cities in the Global South are growing, how they are heating up, and where the quiet
             violence of <span className="hl">spatial fragmentation</span> pushes against sustainable
