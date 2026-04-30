@@ -203,6 +203,7 @@ const Hero = ({ heroCopy, heroSub }) => {
             <div className="hero-ctas">
               <a className="btn btn-filled" href="#work">See the work <Icon.Arrow /></a>
               <a className="btn btn-tonal" href="#writing">Read the papers</a>
+              <a className="btn btn-outline" href="uploads/Avishek_Adhikari_CV.pdf" download><Icon.Download /> Download CV</a>
               <a className="btn btn-outline" href="mailto:avishek.jidpus@gmail.com"><Icon.Mail /> Get in touch</a>
             </div>
           </div>
